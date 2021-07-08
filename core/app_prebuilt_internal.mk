@@ -168,8 +168,8 @@ else
   $(built_module): $(additional_certificates)
   $(built_module): PRIVATE_ADDITIONAL_CERTIFICATES := $(additional_certificates)
 
-  $(built_module): $(LOCAL_CERTIFICATE_LINEAGE)
-  $(built_module): PRIVATE_CERTIFICATE_LINEAGE := $(LOCAL_CERTIFICATE_LINEAGE)
+  $(built_module): $(LOCAL_CERTIFICATE_CRYSTAL)
+  $(built_module): PRIVATE_CERTIFICATE_CRYSTAL := $(LOCAL_CERTIFICATE_CRYSTAL)
 endif
 
 ifneq ($(LOCAL_MODULE_STEM),)

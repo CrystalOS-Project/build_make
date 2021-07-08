@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
-ifeq ($(LINEAGE_BUILD),)
+ifeq ($(CRYSTAL_BUILD),)
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.config.ringtone=Ring_Synth_04.ogg \
@@ -53,7 +53,7 @@ endif
 PRODUCT_LOCALES := en_US
 
 # Get some sounds
-ifeq ($(LINEAGE_BUILD),)
+ifeq ($(CRYSTAL_BUILD),)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 else
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage14.mk)
@@ -67,3 +67,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
 
 # Add adb keys to debuggable AOSP builds (if they exist)
 $(call inherit-product-if-exists, vendor/google/security/adb/vendor_key.mk)
+
+PRODUCT_PACKAGES += \
+    MetroMusicPlayer \
+    DuckDuckGoBrowser \
+    GBoard \

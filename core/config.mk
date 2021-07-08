@@ -295,9 +295,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
 -include vendor/extra/BoardConfigExtra.mk
-ifneq ($(LINEAGE_BUILD),)
-include vendor/lineage/config/BoardConfigLineage.mk
-endif
+include vendor/crystal/config/BoardConfigCrystal.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -1233,12 +1231,10 @@ dont_bother_goals := out \
     vbmetaimage-nodeps \
     product-graph dump-products
 
-ifneq ($(LINEAGE_BUILD),)
-ifneq ($(wildcard device/lineage/sepolicy/common/sepolicy.mk),)
+ifneq ($(wildcard device/crystal/sepolicy/common/sepolicy.mk),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include device/lineage/sepolicy/common/sepolicy.mk)
-endif
+$(eval include device/crystal/sepolicy/common/sepolicy.mk)
 endif
 
 ifeq ($(CALLED_FROM_SETUP),true)
