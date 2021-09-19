@@ -17,5 +17,20 @@
 # Don't modify this file - It's just an alias!
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_phone_armv7.mk)
+$(call inherit-product-if-exists, external/google-fonts/arbutus_slab/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/arvo/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/barlow/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/big-shoulders-text/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/carrois-gothic-sc/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/coming-soon/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/cutive-mono/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/dancing-script/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/fraunces/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/karla/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/lustria/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/source-sans-pro/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/zilla-slab/fonts.mk)
 
 PRODUCT_NAME := sdk
