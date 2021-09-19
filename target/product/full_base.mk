@@ -64,6 +64,6 @@ $(call inherit-product-if-exists, vendor/google/security/adb/vendor_key.mk)
 
 PRODUCT_PACKAGES += \
     MetroMusic \
-    Opera \
-    GoogleCalculator \
+    DuckDuckGo \
+    GCalc \
     GBoard \
