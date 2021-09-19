@@ -33,10 +33,5 @@ PRODUCT_PACKAGES += \
     SettingsIntelligence \
     frameworks-base-overlays
 
-ifeq ($(CRYSTAL_BUILD),)
-PRODUCT_PACKAGES += \
-    LatinIME
-endif
-
 PRODUCT_PACKAGES_DEBUG += \
     frameworks-base-overlays-debug
